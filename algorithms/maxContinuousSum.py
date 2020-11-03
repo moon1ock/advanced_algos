@@ -106,27 +106,3 @@ def kadanealgo(arg):
 
 print(kadanealgo(d))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
