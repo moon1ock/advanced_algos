@@ -60,10 +60,46 @@ def kadanealgo(arg):
     # now, for every element in the array
     # check if adding it to a current sum increases the current sum
     # or if it's better to start a new sum either way
-    for element in arg:
+    for element in arg[1:]:
         current_sum = max(element, current_sum + element)
         max_sum = max(current_sum, max_sum)
+    # at this point max sum is already the desired sum
 
+
+    ############################################################################
+
+
+    # now let's implement the same algorithm, but keep track of the subarray too
+
+
+    current_sum = arg[0]
+    max_sum = current_sum
+
+    start_idx, end_idx, tmp_idx = 0,0,0
+
+
+    for idx in range(1,len(arg)):
+
+        # if element by itself is already bigger than the sum
+        # tham start the whole current sum over
+        if arg[idx] > current_sum + arg[idx]:
+            current_sum = arg[idx]
+            tmp_idx = idx
+
+        # else, just add it to the current sum
+        else:
+            current_sum += arg[idx]
+
+        # in case the current sum is greater that the current max
+        # then get the tmp_idx (the point where we started this
+        # current sum). And the index of the iteration: the point
+        # where we are currently at.
+        if current_sum > max_sum:
+            max_sum = current_sum
+            start_idx = tmp_idx
+            end_idx  = idx
+
+    print(arg[start_idx : end_idx + 1])
 
     return max_sum
 
