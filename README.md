@@ -1,6 +1,6 @@
 # Algorithmic thinking
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://github.com/moon1ock/advanced_algos/blob/main/LICENSE)
 
 
 The sole purpose of this repository is to teach the rising **NYUAD** students the basics of algorithmic thinking.
